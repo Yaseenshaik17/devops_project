@@ -14,7 +14,7 @@ COPY . /app
 RUN pip install --no-cache-dir flask pandas numpy scikit-learn matplotlib seaborn
 
 # Expose the Flask port
-EXPOSE 5000
+EXPOSE 5001
 
 # Run the app (change the filename if needed)
 CMD ["python", "app.py"]
