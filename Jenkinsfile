@@ -1,20 +1,41 @@
 pipeline {
     agent any
+
     stages {
+        stage('Checkout') {
+            steps {
+                git ''
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Building the project...'
+                sh './build.sh' // or use: sh 'mvn clean install'
             }
         }
+
         stage('Test') {
             steps {
-                echo 'Testing the project...'
+                echo 'Running tests...'
+                sh './test.sh' // or use: sh 'mvn test'
             }
         }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying the project...'
+                echo 'Deploying the app...'
+                // Add your deployment logic here (e.g., SSH, kubectl, etc.)
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
         }
     }
 }
