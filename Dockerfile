@@ -4,7 +4,7 @@ FROM python:3.10-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Set working directory
+
 WORKDIR /app
 
 # Copy project files
