@@ -1,1 +1,1 @@
-# devops_project CI/CD pipeline
+# devops_project Jenkins CI/CD pipeline
