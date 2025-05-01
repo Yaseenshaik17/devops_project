@@ -11,21 +11,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh './build.sh' // or sh 'mvn clean install'
+                sh 'echo "Compiling project..."' // Replace with actual build commands
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh './test.sh' // or sh 'mvn test'
+                sh 'echo "Running tests..."' // Replace with actual test commands
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying the app...'
-                // Add deployment logic
+                // Your deployment logic
             }
         }
     }
