@@ -4,28 +4,28 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Yaseenshaik17/devops_project.git'
+                echo 'Source already checked out by Jenkins'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh './build.sh' // or use: sh 'mvn clean install'
+                sh './build.sh' // or sh 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh './test.sh' // or use: sh 'mvn test'
+                sh './test.sh' // or sh 'mvn test'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying the app...'
-                // Add your deployment logic here (e.g., SSH, kubectl, etc.)
+                // Add deployment logic
             }
         }
     }
