@@ -56,7 +56,7 @@ def index():
         plt.figure(figsize=(6, 4))
         sns.barplot(x="Model", y="Accuracy", data=acc_df, palette=["lightblue", "orange"])
         plt.ylim(0, 100)
-        plt.title("Model Accuracy Compari")
+        plt.title("Model Accuracy Comparison")
         plt.savefig("static/accuracy.png")
         plt.close()
 
