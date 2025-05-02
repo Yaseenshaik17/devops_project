@@ -12,21 +12,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                // Add your build commands if any, e.g., for Java: sh 'javac Main.java'
+                
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Add your test commands here if needed
+                
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                // No Docker used
+                
             }
         }
     }
